@@ -2,7 +2,8 @@ let listaDeNumerosSorteados = [];
 let numeroSecreto = geradorDeNumero();
 let tentativas = 0;
 const somAcerto = new Audio("./img/hino.mp3");
-
+const imgRonyGol = new Image();
+imgRonyGol.src = "./img/ronypeca.png";
 
 function exibirTexto(tag, texto) {
     let campo = document.querySelector(tag);
@@ -24,7 +25,7 @@ function verificarChute() {
         tentativas++;
         somAcerto.currentTime = 0;
         somAcerto.play();
-        document.getElementById('ronyDireita').src = "./img/ronypeca.png";
+        document.getElementById('ronyDireita').src = imgRonyGol.src;
         document.getElementById('ronyDireita').style.width = '600px';
         if (tentativas < 2){
             exibirTexto('h1', `Parabéns!\n Acertou com ${tentativas} tentativa!`);
