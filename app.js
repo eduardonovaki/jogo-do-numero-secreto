@@ -24,6 +24,8 @@ function verificarChute() {
         tentativas++;
         somAcerto.currentTime = 0;
         somAcerto.play();
+        document.getElementById('ronyDireita').src = "./img/ronypeca.png";
+        document.getElementById('ronyDireita').style.width = '600px';
         if (tentativas < 2){
             exibirTexto('h1', `Parabéns!\n Acertou com ${tentativas} tentativa!`);
             exibirTexto('p', 'Você descobriu o número secreto!'); 
@@ -71,4 +73,6 @@ function reiniciarJogo(){
     document.getElementById('reiniciar').setAttribute('disabled', true);
     somAcerto.pause();
     somAcerto.currentTime = 0;
+    document.getElementById('ronyDireita').src = "./img/ronydpe.png";
+    document.getElementById('ronyDireita').style.width = '200px';
 }
